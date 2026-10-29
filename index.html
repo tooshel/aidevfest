@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DevFest Phoenix × SunHacks ASU 2026 | Nov 14, Tempe</title>
+<meta name="description" content="A free, in-person day of AI, software, and IoT/edge computing at ASU in Tempe. Workshops, technical talks, keynotes, and demos. Saturday, November 14, 2026, 9 AM to 6 PM.">
+<link rel="canonical" href="https://aidevfest.org/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DevFest Phoenix × SunHacks ASU 2026">
+<meta property="og:description" content="Free, in person at ASU Tempe. AI, software, and IoT/edge computing. Saturday, November 14, 2026.">
+<meta property="og:url" content="https://aidevfest.org/">
+<meta property="og:image" content="https://aidevfest.org/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#101a2e">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/bricolage-grotesque-var.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Bricolage Grotesque';src:url(fonts/bricolage-grotesque-var.woff2) format('woff2');font-weight:200 800;font-display:swap}
+@font-face{font-family:'Figtree';src:url(fonts/figtree-var.woff2) format('woff2');font-weight:300 900;font-display:swap}
+:root{--night:#101a2e;--dusk:#1f2d55;--ink:#1a2233;--soft:#4c5568;--paper:#fbf7f0;--card:#fff;--line:#e7dfd2;
+  --blue:#4285f4;--red:#ea4335;--yellow:#fbbc04;--green:#34a853;--sun:#ffb22e;--link:#1f5fc9;
+  --display:'Bricolage Grotesque',system-ui,sans-serif;--body:'Figtree',system-ui,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+[id]{scroll-margin-top:72px}
+body{margin:0;font:400 1.0625rem/1.6 var(--body);color:var(--ink);background:var(--paper)}
+img,svg{max-width:100%;height:auto}
+a{color:var(--link);text-underline-offset:.2em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+::selection{background:var(--yellow);color:var(--night)}
+h1,h2,h3{font-family:var(--display);line-height:1.05;text-wrap:balance;margin:0}
+h2{font-size:clamp(2rem,4.4vw,3.1rem);font-weight:750;letter-spacing:-.025em}
+h3{font-size:1.25rem;font-weight:700;letter-spacing:-.01em}
+p,li{text-wrap:pretty}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;z-index:99;background:#fff;padding:8px 12px}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:20;background:rgba(16,26,46,.86);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.08)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.mark{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font:700 1rem/1 var(--display);letter-spacing:-.01em;white-space:nowrap}
+.dots{display:inline-flex;gap:3px}.dots i{width:8px;height:8px;border-radius:50%}
+.dots i:nth-child(1){background:var(--blue)}.dots i:nth-child(2){background:var(--red)}.dots i:nth-child(3){background:var(--yellow)}.dots i:nth-child(4){background:var(--green)}
+.top nav{display:flex;align-items:center;gap:22px}
+.top nav a{color:#cdd6ea;text-decoration:none;font-weight:600;font-size:.95rem}
+.top nav a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:750;border-radius:999px;padding:13px 24px;line-height:1.1;
+  transition:transform .15s cubic-bezier(.2,.8,.2,1),background .15s,box-shadow .15s}
+.btn:active{transform:translateY(1px)}
+.btn-sun{background:var(--yellow);color:var(--night);box-shadow:0 8px 22px -10px rgba(251,188,4,.9)}
+.btn-sun:hover{background:#ffcd3c;color:var(--night);transform:translateY(-1px)}
+.btn-line{color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+.btn-line:hover{border-color:#fff;color:#fff}
+.top .btn{padding:9px 18px;font-size:.92rem}
+.top nav a.btn-sun,.top nav a.btn-sun:hover{color:var(--night)}
+
+/* hero: dawn over the desert, signal rings off the sun */
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(180deg,var(--night) 0%,var(--dusk) 52%,#7a3b54 78%,#e0794a 100%);
+  padding:clamp(56px,9vw,110px) 0 0}
+.hero .wrap{position:relative;z-index:2}
+.kick{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 22px;color:#ffd98a;font-weight:700;font-size:1rem}
+.hero h1{font-size:clamp(2.7rem,8vw,6.2rem);font-weight:800;letter-spacing:-.04em;line-height:.92;max-width:11ch}
+.hero h1 .x{color:var(--yellow);font-weight:500}
+.hero .lead{font-size:clamp(1.1rem,2vw,1.3rem);color:#dfe5f3;max-width:46ch;margin:22px 0 30px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.facts{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:12px 40px;margin:44px 0 0;padding:0;list-style:none}
+.facts li{border-left:2px solid rgba(255,255,255,.22);padding-left:14px;margin:0}
+.facts b{display:block;font:700 1.15rem/1.2 var(--display);color:#fff}
+.facts span{color:#c9d2e6;font-size:.95rem}
+.horizon{position:relative;z-index:1;display:block;width:100%;height:auto;margin-top:clamp(-10px,-2vw,-40px)}
+@media (prefers-reduced-motion:no-preference){
+  .ring{animation:pulse 5.5s cubic-bezier(.2,.7,.2,1) infinite;transform-origin:600px 300px;opacity:0}
+  .ring:nth-of-type(2){animation-delay:1.8s}.ring:nth-of-type(3){animation-delay:3.6s}
+  @keyframes pulse{0%{transform:scale(.55);opacity:.0}15%{opacity:.55}100%{transform:scale(1.6);opacity:0}}
+}
+
+/* sections */
+section{padding:clamp(64px,9vw,112px) 0}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
+.intro p{margin:0 0 1rem;font-size:1.12rem}
+.intro .big{font:600 clamp(1.35rem,2.4vw,1.75rem)/1.35 var(--display);letter-spacing:-.01em;color:var(--ink);margin:0}
+.who{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px}
+.who li{display:flex;gap:12px;align-items:baseline;margin:0}
+.who li::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--c);transform:translateY(-1px)}
+.formats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border-top:2px solid var(--ink)}
+.formats div{padding:22px 22px 4px 0;border-right:1px solid var(--line)}
+.formats div:last-child{border-right:0}
+.formats div+div{padding-left:22px}
+.formats .len{display:block;font:700 .9rem/1 var(--body);color:var(--soft);margin:8px 0 10px;font-variant-numeric:tabular-nums}
+.formats p{margin:0;color:var(--soft);font-size:.98rem}
+.band{background:var(--night);color:#dfe5f3}
+.band h2{color:#fff}
+.topics{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:34px 0 0}
+.topics li{margin:0;padding:10px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.18);font-weight:650;color:#fff;
+  background:linear-gradient(90deg,var(--c) 0 6px,transparent 6px);padding-left:24px}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,72px);align-items:start}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 18px 40px -30px rgba(16,26,46,.5)}
+.panel h3{margin-bottom:.5rem}
+.panel p{margin:0 0 .8rem;color:var(--soft)}
+.panel p:last-child{margin-bottom:0}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem;color:var(--ink);background:#f3ede2;border-radius:999px;padding:6px 14px;margin-bottom:14px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 4px rgba(251,188,4,.25)}
+.venue{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+.addr{font:650 clamp(1.4rem,2.6vw,1.9rem)/1.25 var(--display);margin:18px 0 20px;letter-spacing:-.01em}
+.hosts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+.host{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;border-top:4px solid var(--c)}
+.host p{margin:.4rem 0 0;color:var(--soft);font-size:.98rem}
+.history{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:22px 0 0}
+.history a{display:inline-block;padding:9px 16px;border-radius:999px;background:var(--card);border:1px solid var(--line);text-decoration:none;color:var(--ink);font-weight:650}
+.history a:hover{border-color:var(--link);color:var(--link)}
+.history small{color:var(--soft);font-weight:500;margin-left:6px;font-variant-numeric:tabular-nums}
+.final{text-align:center}
+.final h2{max-width:18ch;margin:0 auto}
+.final p{max-width:52ch;margin:18px auto 28px;color:#c9d2e6;font-size:1.1rem}
+.final .cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+footer{background:#0b1222;color:#9aa6bf;font-size:.92rem;padding:34px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
+footer a{color:#dfe5f3}
+
+@media (max-width:900px){
+  .intro,.split,.venue{grid-template-columns:1fr}
+  .formats{grid-template-columns:1fr 1fr}
+  .formats div:nth-child(2){border-right:0}
+  .formats div:nth-child(3){padding-left:0}
+  .hosts{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr 1fr}
+  .top nav a:not(.btn){display:none}
+}
+@media (max-width:520px){
+  .formats{grid-template-columns:1fr}
+  .formats div{border-right:0;padding-left:0!important;border-bottom:1px solid var(--line);padding-bottom:18px}
+  .mark .full{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top"><span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>DevFest Phoenix<span class="full">&nbsp;× SunHacks</span></a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#topics">Topics</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#venue">Venue</a>
+      <a class="btn btn-sun" href="https://gdg.community.dev/events/details/google-gdg-on-campus-arizona-state-university-tempe-united-states-presents-devfest-phoenix-x-sunhacks-asu-2026-call-for-speakers/cohost-gdg-on-campus-arizona-state-university-tempe-united-states/">RSVP free</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero" id="top">
+  <div class="wrap">
+    <p class="kick"><span>Saturday, November 14, 2026</span><span>ASU Tempe</span><span>Free</span></p>
+    <h1>DevFest Phoenix <span class="x">×</span> SunHacks ASU</h1>
+    <p class="lead">A day of hands-on learning, technical talks, and demos about building with AI, and connecting
+      it to the physical world through IoT and edge computing.</p>
+    <div class="cta">
+      <a class="btn btn-sun" href="https://gdg.community.dev/events/details/google-gdg-on-campus-arizona-state-university-tempe-united-states-presents-devfest-phoenix-x-sunhacks-asu-2026-call-for-speakers/cohost-gdg-on-campus-arizona-state-university-tempe-united-states/">RSVP on the GDG event page</a>
+      <a class="btn btn-line" href="devfest-phoenix-2026.ics">Add to calendar</a>
+    </div>
+    <ul class="facts">
+      <li><b>Sat, Nov 14</b><span>2026</span></li>
+      <li><b>9 AM – 6 PM</b><span>Arizona time</span></li>
+      <li><b>Student Pavilion</b><span>ASU Tempe campus</span></li>
+      <li><b>Free</b><span>In person, RSVP required</span></li>
+    </ul>
+  </div>
+  <svg class="horizon" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <radialGradient id="sun" cx="50%" cy="100%" r="100%"><stop offset="0" stop-color="#ffe08a"/><stop offset=".55" stop-color="#ffb22e"/><stop offset="1" stop-color="#f36b3b"/></radialGradient>
+      <pattern id="pcb" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="1.4" fill="#ffffff" fill-opacity=".16"/></pattern>
+    </defs>
+    <circle class="ring" cx="600" cy="300" r="190" fill="none" stroke="#ffd98a" stroke-width="2"/>
+    <circle class="ring" cx="600" cy="300" r="190" fill="none" stroke="#ffd98a" stroke-width="2"/>
+    <circle class="ring" cx="600" cy="300" r="190" fill="none" stroke="#ffd98a" stroke-width="2"/>
+    <circle cx="600" cy="300" r="150" fill="url(#sun)"/>
+    <path d="M0 268 C120 250 210 232 300 246 S470 214 560 238 S720 262 820 236 S1010 220 1200 250 V360 H0Z" fill="#2a1f3d"/>
+    <path d="M0 300 C160 284 300 292 430 280 S700 300 860 284 S1080 290 1200 282 V360 H0Z" fill="#171329"/>
+    <rect x="0" y="282" width="1200" height="78" fill="url(#pcb)"/>
+    <g fill="#120f22">
+      <path d="M180 300v-62a8 8 0 0 1 16 0v26h12v-14a7 7 0 0 1 14 0v24a9 9 0 0 1-9 9h-17v17z"/>
+      <path d="M1000 296v-74a9 9 0 0 1 18 0v34h10v-20a7 7 0 0 1 14 0v30a9 9 0 0 1-9 9h-15v21z"/>
+      <path d="M940 300v-34a6 6 0 0 1 12 0v10h-0v24z"/>
+    </g>
+    <g stroke="#ffd98a" stroke-opacity=".5" stroke-width="2" fill="none">
+      <path d="M600 300v40h120l20 20"/><path d="M600 300v28h-150l-24 32"/><path d="M640 300v18h210"/><path d="M560 300v14h-260"/>
+    </g>
+    <g fill="#ffd98a"><circle cx="740" cy="360" r="4"/><circle cx="426" cy="360" r="4"/><circle cx="850" cy="318" r="4"/><circle cx="300" cy="314" r="4"/></g>
+  </svg>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="intro">
+      <div>
+        <h2>Build with AI. Then connect it to the real world.</h2>
+      </div>
+      <div>
+        <p class="big">GDG Phoenix and GDG on Campus ASU are bringing developers, students, engineers, researchers, and
+          curious builders together, alongside the building and experimenting happening at SunHacks.</p>
+        <p style="margin-top:1.1rem">Expect practical ways to build with AI, develop software, and connect intelligent
+          applications to the physical world through IoT and edge computing.</p>
+        <ul class="who">
+          <li style="--c:var(--blue)">Experienced developers looking to go deeper</li>
+          <li style="--c:var(--red)">Students working on a first project</li>
+          <li style="--c:var(--yellow)">SunHacks hackers looking for ideas and tools</li>
+          <li style="--c:var(--green)">Anyone simply curious about AI and emerging technology</li>
+        </ul>
+      </div>
+    </div>
+    <div class="formats">
+      <div><h3>Keynotes</h3><span class="len">35–45 min</span><p>Big-picture talks on where AI and connected devices are headed.</p></div>
+      <div><h3>Technical talks</h3><span class="len">30 min, with Q&amp;A</span><p>Deep dives from people building the real thing.</p></div>
+      <div><h3>Workshops</h3><span class="len">60–120 min</span><p>Bring a laptop and leave having built something.</p></div>
+      <div><h3>Demos</h3><span class="len">Live</span><p>See projects running, and meet the people who made them.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="topics">
+  <div class="wrap">
+    <h2>What we'll cover</h2>
+    <ul class="topics">
+      <li style="--c:var(--yellow)">AI on the edge</li>
+      <li style="--c:var(--blue)">Building with AI and Gemma</li>
+      <li style="--c:var(--green)">IoT and embedded systems</li>
+      <li style="--c:var(--red)">Sensors and robotics</li>
+      <li style="--c:var(--blue)">Google Cloud</li>
+      <li style="--c:var(--green)">Android</li>
+      <li style="--c:var(--blue)">Flutter</li>
+      <li style="--c:var(--yellow)">Firebase</li>
+      <li style="--c:var(--red)">Web development</li>
+      <li style="--c:var(--green)">Accessibility</li>
+      <li style="--c:var(--yellow)">Developer tooling</li>
+      <li style="--c:var(--red)">Security, privacy, and reliability</li>
+    </ul>
+  </div>
+</section>
+
+<section id="speakers">
+  <div class="wrap split">
+    <div>
+      <h2>Speakers and schedule</h2>
+      <p style="font-size:1.12rem;margin:20px 0 0;max-width:46ch">Speakers are being selected now. The full lineup and the
+        day's schedule will be posted here as soon as they're set.</p>
+    </div>
+    <div class="panel">
+      <span class="status"><i aria-hidden="true"></i>Call for speakers closed</span>
+      <h3>Submitted a talk?</h3>
+      <p>The call for speakers closed on October 28, and organizers are notifying selected speakers by
+        October 30. All sessions are in person.</p>
+      <p>Questions: <a href="mailto:developerstudentclubasu@gmail.com">developerstudentclubasu@gmail.com</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="venue" style="padding-top:0">
+  <div class="wrap venue">
+    <div>
+      <h2>The venue</h2>
+      <p class="addr">Student Pavilion at ASU<br>400 East Orange Street<br>Tempe, AZ 85281</p>
+      <a class="btn btn-sun" href="https://www.google.com/maps/search/?api=1&amp;query=ASU+Student+Pavilion+400+E+Orange+St+Tempe+AZ+85281">Open in Google Maps</a>
+    </div>
+    <div class="panel">
+      <h3>Good to know</h3>
+      <ul class="who" style="margin-top:14px">
+        <li style="--c:var(--blue)">Free, but RSVP so the organizers can plan for you.</li>
+        <li style="--c:var(--red)">This is an in-person event.</li>
+        <li style="--c:var(--yellow)">Workshops are hands-on, so bring a laptop and a charger.</li>
+        <li style="--c:var(--green)">Questions? Email <a href="mailto:developerstudentclubasu@gmail.com">developerstudentclubasu@gmail.com</a>.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f3ede2">
+  <div class="wrap">
+    <h2>Who's putting it on</h2>
+    <div class="hosts">
+      <div class="host" style="--c:var(--blue)"><h3>GDG Phoenix</h3><p>Phoenix's Google Developer Group: developers meeting, learning, and building together.</p></div>
+      <div class="host" style="--c:var(--red)"><h3>GDG on Campus ASU</h3><p>The Google Developer Group on Campus at Arizona State University, Tempe.</p></div>
+      <div class="host" style="--c:var(--yellow)"><h3>SunHacks</h3><p>ASU's student hackathon community, building alongside DevFest.</p></div>
+    </div>
+    <p style="margin:26px 0 0;color:var(--soft)">DevFests are community-run developer events supported by Google. Everyone attending
+      agrees to the <a href="https://developers.google.com/community-guidelines">Google Developer community guidelines</a>.</p>
+
+    <h3 style="margin-top:56px">Phoenix DevFests since 2016</h3>
+    <ul class="history">
+      <li><a href="https://2016.iotdevfest.org/">IoT DevFest<small>2016</small></a></li>
+      <li><a href="https://2017.iotdevfest.org/">IoT DevFest<small>2017</small></a></li>
+      <li><a href="https://2018.iotdevfest.org/">IoT DevFest<small>2018</small></a></li>
+      <li><a href="https://2019.iotdevfest.org/">IoT DevFest<small>2019</small></a></li>
+      <li><a href="https://www.aimldevfest.org/">AI/ML DevFest<small>2019</small></a></li>
+      <li><a href="https://2020.aiotdevfest.org/">AIoT DevFest<small>2020</small></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band final">
+  <div class="wrap">
+    <h2>Save your spot. It's free.</h2>
+    <p>Saturday, November 14, 2026, 9 AM to 6 PM at the ASU Student Pavilion in Tempe. RSVP on the GDG event page so
+      the organizers know you're coming.</p>
+    <div class="cta">
+      <a class="btn btn-sun" href="https://gdg.community.dev/events/details/google-gdg-on-campus-arizona-state-university-tempe-united-states-presents-devfest-phoenix-x-sunhacks-asu-2026-call-for-speakers/cohost-gdg-on-campus-arizona-state-university-tempe-united-states/">RSVP free</a>
+      <a class="btn btn-line" href="devfest-phoenix-2026.ics">Add to calendar</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>DevFest Phoenix × SunHacks ASU 2026 &middot; GDG Phoenix &amp; GDG on Campus ASU–Tempe</span>
+    <span>Questions: <a href="mailto:developerstudentclubasu@gmail.com">developerstudentclubasu@gmail.com</a></span>
+  </div>
+</footer>
+</body>
+</html>

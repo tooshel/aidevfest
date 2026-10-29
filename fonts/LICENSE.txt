@@ -1,0 +1,4 @@
+Fonts are self-hosted copies under the SIL Open Font License 1.1.
+  bricolage-grotesque-var.woff2  Copyright 2022 The Bricolage Grotesque Project Authors (github.com/ateliertriay/bricolage)
+  figtree-var.woff2              Copyright 2022 The Figtree Project Authors (github.com/erikdkennedy/figtree)
+License text: https://openfontlicense.org
