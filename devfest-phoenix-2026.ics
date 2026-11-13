@@ -4,10 +4,10 @@ PRODID:-//aidevfest.org//DevFest Phoenix 2026//EN
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:devfest-phoenix-2026@aidevfest.org
-DTSTAMP:20261113T000000Z
-SEQUENCE:1
+DTSTAMP:20261113T200000Z
+SEQUENCE:2
 DTSTART:20261114T160000Z
-DTEND:20261115T010000Z
+DTEND:20261115T012000Z
 SUMMARY:DevFest Phoenix x sunhacks ASU 2026
 LOCATION:Student Pavilion at ASU\, 400 East Orange Street\, Tempe\, AZ 85281
 DESCRIPTION:Free\, in-person day of AI\, software\, and IoT/edge computing.
