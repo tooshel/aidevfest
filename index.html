@@ -101,9 +101,16 @@ section{padding:clamp(64px,9vw,112px) 0}
 .panel h3{margin-bottom:.5rem}
 .panel p{margin:0 0 .8rem;color:var(--soft)}
 .panel p:last-child{margin-bottom:0}
-.status{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem;color:var(--ink);background:#f3ede2;border-radius:999px;padding:6px 14px;margin-bottom:14px}
-.status i{width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 4px rgba(251,188,4,.25)}
 .sub{font-size:1.12rem;margin:18px 0 0;max-width:52ch}
+.sched-head{position:sticky;top:96px}
+.sched{list-style:none;padding:0;margin:0;border-top:2px solid var(--ink)}
+.sched li{display:grid;grid-template-columns:10.5rem 1fr;gap:16px;align-items:baseline;margin:0;padding:13px 0;border-bottom:1px solid var(--line)}
+.sched time{font-weight:650;font-size:.95rem;color:var(--soft);font-variant-numeric:tabular-nums}
+.sched span{font:700 1.12rem/1.3 var(--display);letter-spacing:-.01em}
+.sched small{display:inline-block;margin-left:10px;padding:3px 10px;border-radius:999px;background:var(--yellow);color:var(--night);
+  font:700 .78rem/1.2 var(--body);letter-spacing:0;vertical-align:2px}
+.sched .brk span{font:600 1rem/1.3 var(--body);color:var(--soft)}
+.sched .brk span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--line);margin-right:10px;vertical-align:1px}
 .route{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(24px,4vw,48px);align-items:stretch;margin-top:34px}
 .steps{list-style:none;padding:0;margin:0;display:grid;gap:26px;align-content:start}
 .steps li{display:flex;gap:16px;margin:0}
@@ -133,6 +140,7 @@ footer a{color:#dfe5f3}
 
 @media (max-width:900px){
   .intro,.split,.route{grid-template-columns:1fr}
+  .sched-head{position:static}
   .map{min-height:380px}
   .formats{grid-template-columns:1fr 1fr}
   .formats div:nth-child(2){border-right:0}
@@ -142,6 +150,7 @@ footer a{color:#dfe5f3}
   .top nav a:not(.btn){display:none}
 }
 @media (max-width:520px){
+  .sched li{grid-template-columns:1fr;gap:2px}
   .formats{grid-template-columns:1fr}
   .formats div{border-right:0;padding-left:0!important;border-bottom:1px solid var(--line);padding-bottom:18px}
   .mark .full{display:none}
@@ -157,7 +166,7 @@ footer a{color:#dfe5f3}
     <nav aria-label="Main">
       <a href="#about">About</a>
       <a href="#topics">Topics</a>
-      <a href="#speakers">Speakers</a>
+      <a href="#schedule">Schedule</a>
       <a href="#venue">Getting there</a>
       <a class="btn btn-sun" href="https://gdg.community.dev/events/details/google-gdg-on-campus-arizona-state-university-tempe-united-states-presents-devfest-phoenix-x-sunhacks-asu-2026-call-for-speakers/cohost-gdg-on-campus-arizona-state-university-tempe-united-states/">RSVP free</a>
     </nav>
@@ -254,20 +263,29 @@ footer a{color:#dfe5f3}
   </div>
 </section>
 
-<section id="speakers">
+<section id="schedule">
   <div class="wrap split">
-    <div>
-      <h2>Speakers and schedule</h2>
-      <p style="font-size:1.12rem;margin:20px 0 0;max-width:46ch">Speakers are being selected now. The full lineup and the
-        day's schedule will be posted here as soon as they're set.</p>
+    <div class="sched-head">
+      <h2>Schedule</h2>
+      <p class="sub">Saturday, November 14. Check in at the Student Pavilion, then head to LSE 104 for the talks.
+        <a href="#venue">Map and parking</a></p>
     </div>
-    <div class="panel">
-      <span class="status"><i aria-hidden="true"></i>Call for speakers closed</span>
-      <h3>Submitted a talk?</h3>
-      <p>The call for speakers closed on October 28, and organizers are notifying selected speakers by
-        October 30. All sessions are in person.</p>
-      <p>Questions: <a href="mailto:developerstudentclubasu@gmail.com">developerstudentclubasu@gmail.com</a></p>
-    </div>
+    <ol class="sched">
+      <li class="brk"><time>9:00–10:00 AM</time><span>Check-in</span></li>
+      <li><time>10:00–10:30 AM</time><span>Jerry Black<small>Opening keynote</small></span></li>
+      <li class="brk"><time>10:30–11:45 AM</time><span>Coffee chat</span></li>
+      <li><time>11:45 AM–12:15 PM</time><span>Allen Firstenberg</span></li>
+      <li><time>12:20–12:50 PM</time><span>Nicholas Hagen</span></li>
+      <li class="brk"><time>12:50–1:40 PM</time><span>Lunch</span></li>
+      <li><time>1:40–2:10 PM</time><span>Kevin Moore</span></li>
+      <li><time>2:15–2:45 PM</time><span>Karthikeyan Subramaniam</span></li>
+      <li><time>2:50–3:20 PM</time><span>Andreas Wolter</span></li>
+      <li><time>3:25–3:55 PM</time><span>Srinivas Vallabhaneni</span></li>
+      <li><time>4:00–4:30 PM</time><span>Yash Thakare</span></li>
+      <li><time>4:35–5:05 PM</time><span>Akhil Kandakatla</span></li>
+      <li><time>5:10–5:40 PM</time><span>Manjari Mettu</span></li>
+      <li><time>5:45–6:05 PM</time><span>Serban Mare<small>Closing keynote</small></span></li>
+    </ol>
   </div>
 </section>
 

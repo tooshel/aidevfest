@@ -14,4 +14,4 @@ tooshel.github.io, all DNS-only).
   view, OpenStreetMap tiles. Pin coordinates come from OpenStreetMap; the walking route line is from
   routing.openstreetmap.de (foot profile). Parking: Apache Blvd Parking Structure (paid on weekends);
   check-in 9 AM at the Student Pavilion; talks from 10 AM in LSE 104.
-- Speakers and schedule are placeholders until the organizers announce them.
+- Schedule (`#schedule`) lists speakers by time slot; check-in is shown as 9–10 AM.
