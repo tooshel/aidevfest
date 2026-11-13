@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DevFest Phoenix × sunhacks ASU 2026 | Nov 14, Tempe</title>
-<meta name="description" content="A free, in-person day of AI, software, and IoT/edge computing at ASU in Tempe. Workshops, technical talks, keynotes, and demos. Saturday, November 14, 2026, 9 AM to 6 PM.">
+<meta name="description" content="A free, in-person day of AI, software, and IoT/edge computing at ASU in Tempe. Tech talks, hands-on workshops, and keynotes. Saturday, November 14, 2026, 9 AM to 6 PM.">
 <link rel="canonical" href="https://aidevfest.org/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="DevFest Phoenix × sunhacks ASU 2026">
@@ -85,7 +85,7 @@ section{padding:clamp(64px,9vw,112px) 0}
 .who{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px}
 .who li{display:flex;gap:12px;align-items:baseline;margin:0}
 .who li::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--c);transform:translateY(-1px)}
-.formats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border-top:2px solid var(--ink)}
+.formats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;border-top:2px solid var(--ink)}
 .formats div{padding:22px 22px 4px 0;border-right:1px solid var(--line)}
 .formats div:last-child{border-right:0}
 .formats div+div{padding-left:22px}
@@ -102,6 +102,7 @@ section{padding:clamp(64px,9vw,112px) 0}
 .panel p{margin:0 0 .8rem;color:var(--soft)}
 .panel p:last-child{margin-bottom:0}
 .sub{font-size:1.12rem;margin:18px 0 0;max-width:52ch}
+#schedule .split{grid-template-columns:.7fr 1.3fr}
 .sched-head{position:sticky;top:96px}
 .sched{list-style:none;padding:0;margin:0;border-top:2px solid var(--ink)}
 .sched li{display:grid;grid-template-columns:10.5rem 1fr;gap:16px;align-items:baseline;margin:0;padding:13px 0;border-bottom:1px solid var(--line)}
@@ -109,6 +110,9 @@ section{padding:clamp(64px,9vw,112px) 0}
 .sched span{font:700 1.12rem/1.3 var(--display);letter-spacing:-.01em}
 .sched small{display:inline-block;margin-left:10px;padding:3px 10px;border-radius:999px;background:var(--yellow);color:var(--night);
   font:700 .78rem/1.2 var(--body);letter-spacing:0;vertical-align:2px}
+.sched em{display:block;margin-top:3px;font:500 .98rem/1.4 var(--body);font-style:normal;letter-spacing:0;color:var(--soft)}
+.sched-sub{margin-top:44px;font-size:1.6rem}
+.sched-note{margin:8px 0 16px;color:var(--soft)}
 .sched .brk span{font:600 1rem/1.3 var(--body);color:var(--soft)}
 .sched .brk span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--line);margin-right:10px;vertical-align:1px}
 .route{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(24px,4vw,48px);align-items:stretch;margin-top:34px}
@@ -140,11 +144,9 @@ footer a{color:#dfe5f3}
 
 @media (max-width:900px){
   .intro,.split,.route{grid-template-columns:1fr}
+  #schedule .split{grid-template-columns:1fr}
   .sched-head{position:static}
   .map{min-height:380px}
-  .formats{grid-template-columns:1fr 1fr}
-  .formats div:nth-child(2){border-right:0}
-  .formats div:nth-child(3){padding-left:0}
   .hosts{grid-template-columns:1fr}
   .facts{grid-template-columns:1fr 1fr}
   .top nav a:not(.btn){display:none}
@@ -235,10 +237,9 @@ footer a{color:#dfe5f3}
       </div>
     </div>
     <div class="formats">
-      <div><h3>Keynotes</h3><span class="len">35–45 min</span><p>Big-picture talks on where AI and connected devices are headed.</p></div>
-      <div><h3>Technical talks</h3><span class="len">30 min, with Q&amp;A</span><p>Deep dives from people building the real thing.</p></div>
-      <div><h3>Workshops</h3><span class="len">60–120 min</span><p>Bring a laptop and leave having built something.</p></div>
-      <div><h3>Demos</h3><span class="len">Live</span><p>See projects running, and meet the people who made them.</p></div>
+      <div><h3>Tech talks</h3><span class="len">30 min</span><p>Deep dives from people building the real thing.</p></div>
+      <div><h3>Workshops</h3><span class="len">90 min, laptop required</span><p>Hands-on sessions. Bring a laptop and leave having built something.</p></div>
+      <div><h3>Keynotes</h3><span class="len">Opening and closing</span><p>Big-picture talks to start and end the day.</p></div>
     </div>
   </div>
 </section>
@@ -269,23 +270,33 @@ footer a{color:#dfe5f3}
       <h2>Schedule</h2>
       <p class="sub">Saturday, November 14. Check in at the Student Pavilion, then head to LSE 104 for the talks.
         <a href="#venue">Map and parking</a></p>
+      <p class="sub">Running late? Check-in stays open until 11:45 AM, so stop there first, and bring your parking
+        ticket.</p>
     </div>
-    <ol class="sched">
-      <li class="brk"><time>9:00–10:00 AM</time><span>Check-in</span></li>
-      <li><time>10:00–10:30 AM</time><span>Jerry Black<small>Opening keynote</small></span></li>
-      <li class="brk"><time>10:30–11:45 AM</time><span>Coffee chat</span></li>
-      <li><time>11:45 AM–12:15 PM</time><span>Allen Firstenberg</span></li>
-      <li><time>12:20–12:50 PM</time><span>Nicholas Hagen</span></li>
-      <li class="brk"><time>12:50–1:40 PM</time><span>Lunch</span></li>
-      <li><time>1:40–2:10 PM</time><span>Kevin Moore</span></li>
-      <li><time>2:15–2:45 PM</time><span>Karthikeyan Subramaniam</span></li>
-      <li><time>2:50–3:20 PM</time><span>Andreas Wolter</span></li>
-      <li><time>3:25–3:55 PM</time><span>Srinivas Vallabhaneni</span></li>
-      <li><time>4:00–4:30 PM</time><span>Yash Thakare</span></li>
-      <li><time>4:35–5:05 PM</time><span>Akhil Kandakatla</span></li>
-      <li><time>5:10–5:40 PM</time><span>Manjari Mettu</span></li>
-      <li><time>5:45–6:05 PM</time><span>Serban Mare<small>Closing keynote</small></span></li>
-    </ol>
+    <div>
+      <ol class="sched">
+        <li class="brk"><time>9:00–10:00 AM</time><span>Check-in</span></li>
+        <li><time>10:00–10:30 AM</time><span>Jerry Black<small>Opening keynote</small><em>Beyond the Code: The Human Skills That Shape Your Tech Career</em></span></li>
+        <li class="brk"><time>10:30–11:45 AM</time><span>Coffee chat</span></li>
+        <li><time>11:45 AM–12:15 PM</time><span>Allen Firstenberg<em>Talk title to be announced</em></span></li>
+        <li><time>12:20–12:50 PM</time><span>Nicholas Hagen<em>Building Resilient Microservices at Netflix Scale</em></span></li>
+        <li class="brk"><time>12:50–1:40 PM</time><span>Lunch</span></li>
+        <li><time>1:40–2:10 PM</time><span>Kevin Moore<em>From Black Belts to Small Language Models: My Taekwondo AI Journey</em></span></li>
+        <li><time>2:15–2:45 PM</time><span>Karthikeyan Subramaniam<em>The AI That Listens but Never Speaks: Real-Time Assistants for Live Conversations</em></span></li>
+        <li><time>2:50–3:20 PM</time><span>Andreas Wolter<em>Why Is My Database Application Slow? From Performance Concepts to Live Troubleshooting</em></span></li>
+        <li><time>3:25–3:55 PM</time><span>Srinivas Vallabhaneni<em>Edge Intelligence: Optimizing Distributed Analytics with Lower Latency and Costs</em></span></li>
+        <li><time>4:00–4:30 PM</time><span>Yash Thakare<em>AI After the Hype: What's Actually Working in Production (and What's Failing)</em></span></li>
+        <li><time>4:35–5:05 PM</time><span>Akhil Kandakatla<em>When Fuzzy Matching Fails: Human-in-the-Loop AI for Messy Real-World Data</em></span></li>
+        <li><time>5:10–5:40 PM</time><span>Manjari Mettu<em>Zero-Downtime Mindset: Lessons from Moving Mission-Critical Systems to the Cloud</em></span></li>
+        <li><time>5:45–6:05 PM</time><span>Serban Mare<small>Closing keynote</small><em>Systems Beat Willpower: How to Protect Your Focus and Energy When the Pressure Never Lets Up</em></span></li>
+      </ol>
+      <h3 class="sched-sub" id="workshops">Workshops</h3>
+      <p class="sched-note">Hands-on sessions running alongside the talks. Bring a laptop. Workshop times may still change.</p>
+      <ol class="sched">
+        <li><time>2:45–4:15 PM</time><span>Nick Yeager<em>Does This Prompt Actually Help? Controlled Evals for AI Coding Tools</em></span></li>
+        <li><time>3:30–5:00 PM</time><span>Manikandan Chandran<em>Build, Break, Defend: Securing AI Agents with the OWASP GenAI Top 10</em></span></li>
+      </ol>
+    </div>
   </div>
 </section>
 
