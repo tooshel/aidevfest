@@ -10,4 +10,8 @@ tooshel.github.io, all DNS-only).
 - RSVP goes to the GDG community event page; the call for speakers (Sessionize/Advocu) closed Oct 28.
 - `devfest-phoenix-2026.ics`: add-to-calendar file (9 AM–6 PM Arizona = 16:00–01:00 UTC).
 - `img/og.png`: social share image, rendered from HTML with headless Chrome.
+- "Getting there" map (`#venue`): Leaflet 1.9.4 vendored in `vendor/leaflet/`, lazy-loaded when the map nears
+  view, OpenStreetMap tiles. Pin coordinates come from OpenStreetMap; the walking route line is from
+  routing.openstreetmap.de (foot profile). Parking: Apache Blvd Parking Structure (paid on weekends);
+  check-in 9 AM at the Student Pavilion; talks from 10 AM in LSE 104.
 - Speakers and schedule are placeholders until the organizers announce them.

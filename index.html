@@ -103,8 +103,19 @@ section{padding:clamp(64px,9vw,112px) 0}
 .panel p:last-child{margin-bottom:0}
 .status{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem;color:var(--ink);background:#f3ede2;border-radius:999px;padding:6px 14px;margin-bottom:14px}
 .status i{width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 4px rgba(251,188,4,.25)}
-.venue{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
-.addr{font:650 clamp(1.4rem,2.6vw,1.9rem)/1.25 var(--display);margin:18px 0 20px;letter-spacing:-.01em}
+.sub{font-size:1.12rem;margin:18px 0 0;max-width:52ch}
+.route{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(24px,4vw,48px);align-items:stretch;margin-top:34px}
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:26px;align-content:start}
+.steps li{display:flex;gap:16px;margin:0}
+.steps p{margin:.35rem 0 .45rem;color:var(--soft);font-size:1rem}
+.n,.pin b{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--c);color:var(--night);
+  font:800 1rem/1 var(--display);border:3px solid #fff;box-shadow:0 2px 8px rgba(16,26,46,.35)}
+.when{display:block;font-weight:750;font-size:.9rem;color:var(--soft);margin:5px 0 4px;font-variant-numeric:tabular-nums}
+.go{font-weight:700;font-size:.95rem}
+.map{min-height:440px;border-radius:18px;border:1px solid var(--line);background:#ece6da;overflow:hidden;z-index:0}
+.pin{background:none;border:0}
+.leaflet-tooltip.pin-tip{font:700 .85rem/1.2 var(--body);color:var(--night);border:0;border-radius:8px;padding:5px 9px;box-shadow:0 4px 14px -4px rgba(16,26,46,.45)}
+.leaflet-container{font-family:var(--body)}
 .hosts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
 .host{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;border-top:4px solid var(--c)}
 .host p{margin:.4rem 0 0;color:var(--soft);font-size:.98rem}
@@ -121,7 +132,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-bet
 footer a{color:#dfe5f3}
 
 @media (max-width:900px){
-  .intro,.split,.venue{grid-template-columns:1fr}
+  .intro,.split,.route{grid-template-columns:1fr}
+  .map{min-height:380px}
   .formats{grid-template-columns:1fr 1fr}
   .formats div:nth-child(2){border-right:0}
   .formats div:nth-child(3){padding-left:0}
@@ -146,7 +158,7 @@ footer a{color:#dfe5f3}
       <a href="#about">About</a>
       <a href="#topics">Topics</a>
       <a href="#speakers">Speakers</a>
-      <a href="#venue">Venue</a>
+      <a href="#venue">Getting there</a>
       <a class="btn btn-sun" href="https://gdg.community.dev/events/details/google-gdg-on-campus-arizona-state-university-tempe-united-states-presents-devfest-phoenix-x-sunhacks-asu-2026-call-for-speakers/cohost-gdg-on-campus-arizona-state-university-tempe-united-states/">RSVP free</a>
     </nav>
   </div>
@@ -165,7 +177,7 @@ footer a{color:#dfe5f3}
     </div>
     <ul class="facts">
       <li><b>Sat, Nov 14</b><span>2026</span></li>
-      <li><b>9 AM – 6 PM</b><span>Arizona time</span></li>
+      <li><b>9 AM – 6 PM</b><span>Check-in 9, talks 10</span></li>
       <li><b>Student Pavilion</b><span>ASU Tempe campus</span></li>
       <li><b>Free</b><span>In person, RSVP required</span></li>
     </ul>
@@ -260,13 +272,45 @@ footer a{color:#dfe5f3}
 </section>
 
 <section id="venue" style="padding-top:0">
-  <div class="wrap venue">
-    <div>
-      <h2>The venue</h2>
-      <p class="addr">Student Pavilion at ASU<br>400 East Orange Street<br>Tempe, AZ 85281</p>
-      <a class="btn btn-sun" href="https://www.google.com/maps/search/?api=1&amp;query=ASU+Student+Pavilion+400+E+Orange+St+Tempe+AZ+85281">Open in Google Maps</a>
+  <div class="wrap">
+    <h2>Getting there</h2>
+    <p class="sub">Park on Apache Blvd, check in at the Student Pavilion, then walk over to LSE 104 for the talks.
+      Everything is within a 10-minute walk.</p>
+    <div class="route">
+      <ol class="steps">
+        <li style="--c:var(--blue)">
+          <b class="n" aria-hidden="true">1</b>
+          <div>
+            <span class="when">Park</span>
+            <h3>Apache Blvd Parking Structure</h3>
+            <p>401 E Lemon St, Tempe. <strong>Parking is not free</strong>, even on Saturday: pull a ticket when you
+              drive in and pay by card before you leave. ASU charges $4 an hour, up to $16
+              (<a href="https://cfo.asu.edu/daily-and-hourly">current rates</a>).</p>
+            <a class="go" href="https://www.google.com/maps/dir/?api=1&amp;destination=Apache+Boulevard+Parking+Structure%2C+401+E+Lemon+St%2C+Tempe%2C+AZ+85281&amp;travelmode=driving">Driving directions</a>
+          </div>
+        </li>
+        <li style="--c:var(--yellow)">
+          <b class="n" aria-hidden="true">2</b>
+          <div>
+            <span class="when">9 AM &middot; Check in</span>
+            <h3>Student Pavilion</h3>
+            <p>400 E Orange St. About an 8-minute walk north of the parking structure.</p>
+            <a class="go" href="https://www.google.com/maps/dir/?api=1&amp;origin=33.415335%2C-111.934028&amp;destination=33.418669%2C-111.933731&amp;travelmode=walking">Walking directions from parking</a>
+          </div>
+        </li>
+        <li style="--c:var(--green)">
+          <b class="n" aria-hidden="true">3</b>
+          <div>
+            <span class="when">10 AM &middot; Talks</span>
+            <h3>LSE 104</h3>
+            <p>Life Sciences E-Wing, room 104. A 2-minute walk north of the Student Pavilion.</p>
+            <a class="go" href="https://www.google.com/maps/dir/?api=1&amp;origin=33.418669%2C-111.933731&amp;destination=33.4195%2C-111.933836&amp;travelmode=walking">Walking directions from check-in</a>
+          </div>
+        </li>
+      </ol>
+      <div class="map" id="map" role="region" aria-label="Map of the walk from the Apache Blvd Parking Structure to the Student Pavilion and LSE 104"></div>
     </div>
-    <div class="panel">
+    <div class="panel" style="margin-top:28px">
       <h3>Good to know</h3>
       <ul class="who" style="margin-top:14px">
         <li style="--c:var(--blue)">Free, but RSVP so the organizers can plan for you.</li>
@@ -304,8 +348,8 @@ footer a{color:#dfe5f3}
 <section class="band final">
   <div class="wrap">
     <h2>Save your spot. It's free.</h2>
-    <p>Saturday, November 14, 2026, 9 AM to 6 PM at the ASU Student Pavilion in Tempe. RSVP on the GDG event page so
-      the organizers know you're coming.</p>
+    <p>Saturday, November 14, 2026 at ASU in Tempe. Check in at the Student Pavilion at 9 AM; talks start at 10 AM in
+      LSE 104. RSVP on the GDG event page so the organizers know you're coming.</p>
     <div class="cta">
       <a class="btn btn-sun" href="https://gdg.community.dev/events/details/google-gdg-on-campus-arizona-state-university-tempe-united-states-presents-devfest-phoenix-x-sunhacks-asu-2026-call-for-speakers/cohost-gdg-on-campus-arizona-state-university-tempe-united-states/">RSVP free</a>
       <a class="btn btn-line" href="devfest-phoenix-2026.ics">Add to calendar</a>
@@ -320,5 +364,51 @@ footer a{color:#dfe5f3}
     <span>Questions: <a href="mailto:developerstudentclubasu@gmail.com">developerstudentclubasu@gmail.com</a></span>
   </div>
 </footer>
+<script>
+// Venue map: Leaflet + OpenStreetMap tiles, loaded only when the map scrolls near view.
+// Walking route from routing.openstreetmap.de (foot profile), parking -> Pavilion -> LSE.
+(function(){
+  var el=document.getElementById('map');
+  if(!el) return;
+  var spots=[
+    {n:1,c:'#4285f4',ll:[33.415335,-111.934028],label:'Park here',dir:'left'},
+    {n:2,c:'#fbbc04',ll:[33.418669,-111.933731],label:'Check in, 9 AM',dir:'right'},
+    {n:3,c:'#34a853',ll:[33.4195,-111.933836],label:'Talks, 10 AM: LSE 104',dir:'right'}
+  ];
+  var walk=[[33.415335,-111.934028],[33.414985,-111.934024],[33.414991,-111.933386],[33.41504,-111.933367],[33.41513,-111.933368],[33.415142,-111.933256],
+    [33.415194,-111.933264],[33.415922,-111.933272],[33.416015,-111.933266],[33.416015,-111.933327],[33.416072,-111.93338],[33.416233,-111.933379],
+    [33.416247,-111.933435],[33.416282,-111.93353],[33.416372,-111.933489],[33.416474,-111.933458],[33.416564,-111.933452],[33.416656,-111.933531],
+    [33.416791,-111.933738],[33.416891,-111.933709],[33.416982,-111.933748],[33.417042,-111.933846],[33.417047,-111.933886],[33.417151,-111.933888],
+    [33.417202,-111.933911],[33.41726,-111.933866],[33.417379,-111.933743],[33.417503,-111.93361],[33.417584,-111.93355],[33.417703,-111.93348],
+    [33.417829,-111.933473],[33.418022,-111.933495],[33.418074,-111.933508],[33.418165,-111.933463],[33.418341,-111.933437],[33.418406,-111.933414],
+    [33.418424,-111.933372],[33.418473,-111.933378],[33.418882,-111.933377],[33.418882,-111.933731],[33.418882,-111.933976],[33.418904,-111.934031],
+    [33.418938,-111.934049],[33.419265,-111.934056],[33.419304,-111.934044],[33.419322,-111.934005],[33.419323,-111.933834],[33.4195,-111.933836]];
+  function draw(){
+    var map=L.map(el,{zoomSnap:.5,scrollWheelZoom:false,dragging:!matchMedia('(pointer:coarse)').matches,tap:false});
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,
+      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
+    L.polyline(walk,{color:'#fff',weight:9,opacity:.85}).addTo(map);
+    L.polyline(walk,{color:'#101a2e',weight:4,dashArray:'1 9',lineCap:'round'}).addTo(map);
+    spots.forEach(function(s){
+      L.marker(s.ll,{keyboard:false,icon:L.divIcon({className:'pin',html:'<b style="--c:'+s.c+'">'+s.n+'</b>',iconSize:[34,34],iconAnchor:[17,17]})})
+        .bindTooltip(s.label,{permanent:true,direction:s.dir,offset:[s.dir==='left'?-18:18,0],className:'pin-tip'}).addTo(map);
+    });
+    function fit(){map.fitBounds(walk,{padding:[30,30]});}
+    fit();
+    map.on('resize',fit);
+  }
+  function load(){
+    var css=document.createElement('link');
+    css.rel='stylesheet';css.href='vendor/leaflet/leaflet.css';
+    document.head.appendChild(css);
+    var js=document.createElement('script');
+    js.src='vendor/leaflet/leaflet.js';js.onload=draw;
+    document.head.appendChild(js);
+  }
+  if(!('IntersectionObserver' in window)) return load();
+  var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();load();}},{rootMargin:'600px'});
+  io.observe(el);
+})();
+</script>
 </body>
 </html>
