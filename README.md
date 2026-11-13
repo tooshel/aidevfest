@@ -17,6 +17,6 @@ tooshel.github.io, all DNS-only).
   check-in 9 AM at the Student Pavilion; talks from 10 AM in LSE 104.
 - Schedule (`#schedule`): speakers + talk titles by time slot (titles matched from the prelim list), check-in
   shown as 9–10 AM with a note that it stays open until 11:45. Workshops listed below; their times may change.
-- `schedule.html` speaker avatars are initials (`<span class="av">`) until photos arrive; swap each for
-  `<img class="av" src="img/speakers/<name>.jpg" alt="">`. Talk/role/bio text came from the organizers' Figma
-  speaker page (xYNdGQ1RFPyaGqL04Rh2n8).
+- `schedule.html` speaker photos are `img/speakers/<first-last>.jpg` (200px square, shown as 52px circles).
+  Photos and talk/role/bio text came from the organizers' Figma speaker page (xYNdGQ1RFPyaGqL04Rh2n8); the
+  images were pulled from the file's image fills and matched to speakers by eye.
